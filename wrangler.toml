@@ -1,0 +1,6 @@
+name = "finchleyhs-org"
+compatibility_date = "2025-06-26"
+
+[assets]
+directory = "./public/" 
+not_found_handling = "404-page"
