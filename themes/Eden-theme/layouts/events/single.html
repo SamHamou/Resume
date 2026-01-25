@@ -1,0 +1,85 @@
+{{ define "main" }}
+<div class="page-header decorative-header">
+    <div class="container">
+        <h1 class="page-title">{{ .Title }}</h1>
+        <p class="page-subtitle">{{ .Date.Format "2 January 2006" }}</p>
+    </div>
+</div>
+
+<div class="container page-content-section">
+    <div class="content-wrapper">
+        <article class="prose">
+            {{ .Content }}
+        </article>
+
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <h4 class="sidebar-title">Quick Links</h4>
+                <ul class="sidebar-list">
+                    {{ range .Site.Menus.main }}
+                    <li class="sidebar-list-item">
+                        <a href="{{ .URL | relURL }}" class="sidebar-link">
+                            <span style="color: var(--primary-color);">→</span> {{ .Name }}
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+
+            <div class="sidebar-box sidebar-cta">
+                <h4>Become a Member</h4>
+                <p>Join our society and enjoy all the
+                    benefits of membership including access to the trading hut.</p>
+                <a href="/members" class="btn sidebar-cta-btn">Apply Now</a>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<style>
+    .prose h1,
+    .prose h2,
+    .prose h3 {
+        color: var(--secondary-color);
+        margin: 2rem 0 1rem;
+    }
+
+    .prose p {
+        margin-bottom: 1.5rem;
+        color: var(--text-main);
+    }
+
+    .prose img {
+        margin: 2rem auto;
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+    }
+
+    .prose ul,
+    .prose ol {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .prose li {
+        margin-bottom: 0.5rem;
+    }
+
+    .prose a {
+        color: var(--primary-color);
+        text-decoration: underline;
+        font-weight: 500;
+    }
+
+    .prose hr {
+        border: none;
+        border-top: 2px solid var(--bg-light);
+        margin: 3rem 0;
+    }
+</style>
+{{ end }}

@@ -1,0 +1,24 @@
+<nav>
+	<ul>
+		<li><strong>{{ .Site.Title }}</strong></li>
+	</ul>
+	{{- if .Site.Menus.main -}}
+	<!-- Hamburger menu toggle (hidden checkbox) -->
+	<input type="checkbox" id="menu-btn" class="menu-btn" aria-label="Toggle menu">
+	<label for="menu-btn" class="menu-icon">
+		<span class="nav-icon">&#x2261;</span>
+	</label>
+	<ul class="menu">
+		{{- $currentPage := . -}}
+		{{- range .Site.Menus.main -}}
+		<li>
+		{{- if or ($currentPage.IsMenuCurrent .Menu .) ($currentPage.HasMenuCurrent .Menu .) -}}
+		<a href="{{ .URL | relURL }}" aria-current="page">{{ .Name }}</a>
+		{{- else -}}
+		<a href="{{ .URL | relURL }}">{{ .Name }}</a>
+		{{- end -}}
+		</li>
+		{{- end -}}
+	</ul>
+	{{- end -}}
+</nav> 

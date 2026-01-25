@@ -1,0 +1,35 @@
+<header>
+    <div class="container">
+        <a href="/" class="logo">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="8" fill="#12C12D" />
+                <path
+                    d="M20 32V18M20 18C20 18 14 16 12 10C12 10 18 12 20 18ZM20 18C20 18 26 16 28 10C28 10 22 12 20 18Z"
+                    stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div>
+                <span class="logo-text">Finchley Horticultural Society</span>
+            </div>
+        </a>
+
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+            <div class="hamburger"></div>
+        </button>
+
+        <nav id="primary-navigation">
+            <ul class="nav-links">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                {{ $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+                {{ $isSection := (hasPrefix $currentPage.RelPermalink .URL) }}
+                <li>
+                    <a href="{{ .URL | relURL }}" class="{{ if or $isActive $isSection }}active{{ end }}">
+                        {{ .Name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</header>

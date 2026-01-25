@@ -1,0 +1,44 @@
+<div class="newsletter-archive">
+  {{ range site.Data.newsletters }}
+  <div class="newsletter-year-section">
+    <h3 class="newsletter-year">{{ .year }}</h3>
+    <div class="newsletter-cards-grid">
+      {{ with .newsletters.spring }}
+      <a href="{{ .url }}" class="newsletter-card" target="_blank">
+        <div class="newsletter-icon">🌱</div>
+        <div class="newsletter-season">Spring</div>
+        <div class="newsletter-title">{{ .title }}</div>
+        <div class="newsletter-download">Download PDF →</div>
+      </a>
+      {{ end }}
+
+      {{ with .newsletters.summer }}
+      <a href="{{ .url }}" class="newsletter-card" target="_blank">
+        <div class="newsletter-icon">☀️</div>
+        <div class="newsletter-season">Summer</div>
+        <div class="newsletter-title">{{ .title }}</div>
+        <div class="newsletter-download">Download PDF →</div>
+      </a>
+      {{ end }}
+
+      {{ with .newsletters.autumn }}
+      <a href="{{ .url }}" class="newsletter-card" target="_blank">
+        <div class="newsletter-icon">🍂</div>
+        <div class="newsletter-season">Autumn</div>
+        <div class="newsletter-title">{{ .title }}</div>
+        <div class="newsletter-download">Download PDF →</div>
+      </a>
+      {{ end }}
+
+      {{ with .newsletters.winter }}
+      <a href="{{ .url }}" class="newsletter-card" target="_blank">
+        <div class="newsletter-icon">❄️</div>
+        <div class="newsletter-season">Winter</div>
+        <div class="newsletter-title">{{ .title }}</div>
+        <div class="newsletter-download">Download PDF →</div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>

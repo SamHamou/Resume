@@ -1,0 +1,86 @@
+{{ define "main" }}
+<div class="page-header decorative-header">
+    <div class="container">
+        <h1 class="page-title">Get in Touch</h1>
+        <p class="page-subtitle">Have questions about our allotments or want to join the society? We're here to help.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="contact-container">
+        <div class="contact-info-section">
+            <h2>Contact Information</h2>
+            <p style="margin-bottom: 40px; color: var(--text-muted);">Please feel free to reach out to us through any of
+                the channels below. For plot inquiries, please note that we currently have a waiting list.</p>
+
+            <div class="contact-info-cards">
+                <div class="contact-card">
+                    <div style="font-size: 1.5rem; margin-bottom: 15px;">📍</div>
+                    <h3>Our Office</h3>
+                    <p>34 Elm Park Road<br>London N3 1EB</p>
+                </div>
+                <div class="contact-card">
+                    <div style="font-size: 1.5rem; margin-bottom: 15px;">✉️</div>
+                    <h3>General Email</h3>
+                    <p><a href="mailto:mail@finchleyhs.org">mail@finchleyhs.org</a></p>
+                </div>
+            </div>
+
+            <div class="site-secretaries">
+                <h3 class="secretary-title">Site Secretaries</h3>
+                <div class="secretary-list">
+                    <div class="secretary-card">
+                        <h4>Gordon Road</h4>
+                        <p class="secretary-name">Rosa Tormo</p>
+                        <a href="mailto:gordonroad@finchleyhs.org" class="secretary-email">gordonroad@finchleyhs.org</a>
+                    </div>
+                    <div class="secretary-card">
+                        <h4>Nethercourt</h4>
+                        <p class="secretary-name">Janine Limberg / Derry Sharkey</p>
+                        <a href="mailto:nethercourt@finchleyhs.org"
+                            class="secretary-email">nethercourt@finchleyhs.org</a>
+                    </div>
+                    <div class="secretary-card">
+                        <h4>Brent Way</h4>
+                        <p class="secretary-name">Elain Wright</p>
+                        <a href="mailto:brentway@finchleyhs.org" class="secretary-email">brentway@finchleyhs.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-card">
+            <h3 style="margin-bottom: 30px; font-size: 1.5rem; color: var(--secondary-color);">Send us a Message</h3>
+            <form action="https://formspree.io/f/{{ .Site.Params.formspree_id | default " your-id" }}" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="_replyto" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Your message here..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1rem;">Send
+                    Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Additional Content from Markdown -->
+    <div class="contact-additional-content">
+        <div class="content-styled">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+{{ end }}
