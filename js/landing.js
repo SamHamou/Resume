@@ -1,9 +1,9 @@
-// Gooads CV - Landing Page Interactivity
+// Resume - Landing Page Interactivity
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize language if languages.js is loaded
   if (typeof setLanguage === 'function') {
-    const savedLang = localStorage.getItem('gooadsLang') || 'en';
+    const savedLang = localStorage.getItem('resumeLang') || 'en';
     setLanguage(savedLang);
     
     const langSelect = document.getElementById('lang-select');

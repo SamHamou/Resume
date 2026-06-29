@@ -1,4 +1,4 @@
-/* Gooads CV Generator - Modern ResumePro-style Design */
+/* Resume - Modern ResumePro-style Design */
 
 /* ===== CSS Variables ===== */
 :root {
@@ -123,6 +123,7 @@ a { text-decoration: none; color: inherit; transition: color 0.2s; }
 }
 .cta-row { display: flex; gap: 16px; align-items: center; }
 .btn-primary {
+  display: inline-block;
   background: var(--primary);
   color: white;
   padding: 16px 28px;
