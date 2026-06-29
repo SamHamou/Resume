@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Frequently Asked Questions | Gooads CV</title>
+  <meta name="description" content="Frequently asked questions about Gooads CV Generator. Learn about pricing, privacy, formats, and how our free CV builder works.">
+  <meta name="keywords" content="cv generator faq, free resume builder questions, cv maker help, privacy, pdf format">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gooads-cv.pages.dev/pages/faq.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gooads-cv.pages.dev/pages/faq.html">
+  <meta property="og:title" content="FAQ | Frequently Asked Questions">
+  <meta property="og:description" content="Frequently asked questions about Gooads CV Generator.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "FAQ",
+    "description": "Frequently asked questions about Gooads CV Generator",
+    "url": "https://gooads-cv.pages.dev/pages/faq.html"
+  }
+  </script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .faq-hero { background: linear-gradient(135deg, #f0f4ff 0%, #fef2f2 100%); padding: 120px 24px 80px; position: relative; overflow: hidden; }
+    .faq-hero::before { content: '?'; position: absolute; right: -60px; top: -80px; font-size: 400px; font-weight: 900; color: rgba(79,70,229,0.04); line-height: 1; }
+    .faq-hero h1 { font-size: 44px; font-weight: 800; color: var(--text); text-align: center; position: relative; z-index: 1; }
+    .faq-hero p { font-size: 18px; color: var(--text-secondary); text-align: center; max-width: 500px; margin: 14px auto 0; position: relative; z-index: 1; }
+    .faq-search-wrap { max-width: 480px; margin: 32px auto 0; position: relative; z-index: 1; }
+    .faq-search-wrap input { width: 100%; padding: 16px 22px; border: 1px solid var(--border); border-radius: 14px; font-size: 15px; background: var(--bg-card); box-shadow: 0 2px 8px rgba(0,0,0,0.04); outline: none; transition: all 0.2s; }
+    .faq-search-wrap input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(79,70,229,0.12); }
+    .faq-search-wrap input::placeholder { color: var(--text-muted); }
+    .faq-cats { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 28px; position: relative; z-index: 1; }
+    .faq-cat { padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; border: 1px solid var(--border); background: var(--bg-card); cursor: pointer; transition: all 0.2s; color: var(--text-secondary); }
+    .faq-cat:hover { border-color: var(--primary-light); color: var(--primary); background: var(--accent-bg); }
+    .faq-cat.active { background: var(--primary); color: #fff; border-color: var(--primary); box-shadow: 0 2px 8px rgba(79,70,229,0.25); }
+    .faq-body { padding: 60px 0 80px; }
+    .faq-list { max-width: 800px; margin: 0 auto; padding: 0 28px; display: grid; gap: 16px; }
+    .faq-q { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: all 0.2s; }
+    .faq-q:hover { border-color: var(--primary-light); box-shadow: 0 2px 12px rgba(79,70,229,0.06); }
+    .faq-q-summary { padding: 20px 28px; cursor: pointer; font-weight: 600; font-size: 15px; color: var(--text); display: flex; justify-content: space-between; align-items: center; gap: 16px; list-style: none; user-select: none; }
+    .faq-q-summary::-webkit-details-marker { display: none; }
+    .faq-q-icon { width: 32px; height: 32px; background: var(--accent-bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s; font-size: 16px; color: var(--primary); }
+    .faq-q[open] .faq-q-icon { transform: rotate(45deg); background: var(--primary); color: #fff; box-shadow: 0 2px 8px rgba(79,70,229,0.3); }
+    .faq-q-answer { padding: 4px 28px 24px; font-size: 14px; color: var(--text-secondary); line-height: 1.8; }
+    .faq-q-answer a { color: var(--primary); font-weight: 600; }
+    .faq-q-answer a:hover { text-decoration: underline; }
+    .faq-empty { text-align: center; padding: 60px 24px; color: var(--text-muted); display: none; font-size: 15px; }
+    .faq-contact { max-width: 600px; margin: 60px auto 0; padding: 0 28px; text-align: center; }
+    .faq-contact h3 { font-size: 22px; font-weight: 700; }
+    .faq-contact p { color: var(--text-secondary); margin-top: 10px; font-size: 15px; }
+    @media (max-width: 768px) {
+      .faq-hero { padding: 100px 24px 60px; }
+      .faq-hero h1 { font-size: 30px; }
+      .faq-hero::before { font-size: 200px; right: -30px; top: -40px; }
+      .faq-q-summary { padding: 16px 20px; font-size: 14px; }
+      .faq-q-answer { padding: 2px 20px 20px; }
+      .faq-cats { gap: 8px; }
+      .faq-cat { padding: 6px 14px; font-size: 13px; }
+    }
+  </style>
+  <script src="../js/languages.js"></script>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="../index.html" class="logo" aria-label="Gooads CV Generator Home">
+        <span class="logo-icon">📄</span>
+        <span class="logo-text">Gooads<span class="logo-accent">CV</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="features.html" data-i18n="features">Features</a>
+        <a href="how-it-works.html" data-i18n="howItWorks">How It Works</a>
+        <a href="faq.html" data-i18n="faq">FAQ</a>
+        <a href="cv.html" data-i18n="createCV">Create CV</a>
+        <select id="lang-select" class="lang-select">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="faq-hero">
+    <div class="container">
+      <h1 data-i18n="faqTitle">Frequently Asked Questions</h1>
+      <p data-i18n="faqSub">Got questions? We've got answers.</p>
+      <div class="faq-search-wrap">
+        <input type="text" id="faq-search" placeholder="Search questions..." autocomplete="off">
+      </div>
+      <div class="faq-cats">
+        <button class="faq-cat active" data-cat="all">All</button>
+        <button class="faq-cat" data-cat="general">General</button>
+        <button class="faq-cat" data-cat="privacy">Privacy</button>
+        <button class="faq-cat" data-cat="templates">Templates</button>
+        <button class="faq-cat" data-cat="usage">Usage</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-body">
+    <div class="faq-list" id="faq-list">
+      <details class="faq-q" data-cat="general">
+        <summary class="faq-q-summary"><span data-i18n="free">Is Gooads CV Generator really free?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p data-i18n="freeAns">Yes, absolutely! Gooads CV Generator is 100% free to use. There are no hidden charges and no need to sign up.</p></div>
+      </details>
+      <details class="faq-q" data-cat="privacy">
+        <summary class="faq-q-summary"><span data-i18n="safe">Is my data safe?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p data-i18n="safeAns">Your privacy is our priority. All data is stored locally in your browser using localStorage. Nothing is sent to any server.</p></div>
+      </details>
+      <details class="faq-q" data-cat="usage">
+        <summary class="faq-q-summary"><span data-i18n="format">What format can I download my CV in?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p data-i18n="formatAns">You can download your CV as a PDF file, which is the most universally accepted format for job applications.</p></div>
+      </details>
+      <details class="faq-q" data-cat="usage">
+        <summary class="faq-q-summary"><span data-i18n="install">Do I need to install any software?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p data-i18n="installAns">No installation required! Gooads CV Generator works entirely in your web browser.</p></div>
+      </details>
+      <details class="faq-q" data-cat="usage">
+        <summary class="faq-q-summary"><span data-i18n="edit">Can I edit my CV after downloading?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p data-i18n="editAns">Yes! Your CV data is saved in your browser. Simply return to the CV builder to make changes.</p></div>
+      </details>
+      <details class="faq-q" data-cat="general">
+        <summary class="faq-q-summary"><span data-i18n="include">What information should I include in my CV?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p data-i18n="includeAns">A strong CV typically includes: Contact information, professional summary, work experience, education, and relevant skills.</p></div>
+      </details>
+      <details class="faq-q" data-cat="templates">
+        <summary class="faq-q-summary"><span>Which template should I choose?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p>It depends on your industry and target role. <strong>Classic</strong>, <strong>Modern</strong>, and <strong>Minimal</strong> are ATS-friendly and recommended for corporate applications. <strong>Executive</strong> suits senior professionals. <strong>Creative</strong> works well for design and media roles.</p></div>
+      </details>
+      <details class="faq-q" data-cat="usage">
+        <summary class="faq-q-summary"><span>Can I use Gooads CV offline?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p>Yes! After the initial page load, the CV builder works fully offline. All processing happens in your browser with no server requests.</p></div>
+      </details>
+      <details class="faq-q" data-cat="usage">
+        <summary class="faq-q-summary"><span>Does it work on mobile devices?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p>Absolutely. The CV builder is fully responsive and works on phones, tablets, and desktops. The form and preview are in a convenient tabbed layout on small screens.</p></div>
+      </details>
+      <details class="faq-q" data-cat="usage">
+        <summary class="faq-q-summary"><span>How do I switch between English and Spanish?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p>Use the language dropdown in the navigation bar. The entire interface, including the CV preview and PDF export, will switch languages instantly.</p></div>
+      </details>
+      <details class="faq-q" data-cat="templates">
+        <summary class="faq-q-summary"><span>What is the difference between single-column and multi-column templates?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p><strong>Single-column</strong> templates (Classic, Modern, Minimal) are recommended for most applications as they are ATS-friendly and easy to read. <strong>Multi-column</strong> templates (Executive, Creative) offer more visual layout but may not parse correctly in all applicant tracking systems.</p></div>
+      </details>
+      <details class="faq-q" data-cat="privacy">
+        <summary class="faq-q-summary"><span>Do you store my CV data on your servers?</span><span class="faq-q-icon">+</span></summary>
+        <div class="faq-q-answer"><p>No. Gooads CV Generator does not have servers. Your CV data is stored exclusively in your browser's localStorage. Nothing is uploaded or transmitted. Your data is yours and never leaves your device.</p></div>
+      </details>
+    </div>
+    <div class="faq-empty" id="faq-empty">No matching questions found.</div>
+    <div class="faq-contact">
+      <h3>Still have questions?</h3>
+      <p>Try the CV builder — it's free and you'll see how everything works in action.</p>
+      <a href="cv.html" class="btn-primary" style="display:inline-block;margin-top:16px;" data-i18n="createResume">Create My Resume</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <span class="logo-icon">📄</span>
+            <span class="logo-text">Gooads<span class="logo-accent">CV</span></span>
+          </a>
+          <p>Free, privacy-focused CV generator for everyone.</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="quickLinks">Quick Links</h4>
+          <a href="cv.html" data-i18n="createCV">Create CV</a>
+          <a href="features.html" data-i18n="features">Features</a>
+          <a href="how-it-works.html" data-i18n="howItWorks">How It Works</a>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="resources">Resources</h4>
+          <a href="#" data-i18n="resumeTips">Resume Tips</a>
+          <a href="#" data-i18n="jobSearch">Job Search</a>
+          <a href="#" data-i18n="careerAdvice">Career Advice</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="copyright">&copy; 2025 Gooads CV Generator. All rights reserved.</p>
+        <p data-i18n="privacy">Your data stays on your device. No tracking, no servers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var searchInput = document.getElementById('faq-search');
+      var items = document.querySelectorAll('.faq-q');
+      var empty = document.getElementById('faq-empty');
+      var catBtns = document.querySelectorAll('.faq-cat');
+      var activeCat = 'all';
+
+      function filter() {
+        var q = searchInput.value.toLowerCase().trim();
+        var visible = 0;
+        items.forEach(function(item){
+          var text = item.textContent.toLowerCase();
+          var cat = item.getAttribute('data-cat');
+          var matchCat = activeCat === 'all' || cat === activeCat;
+          var matchSearch = !q || text.indexOf(q) !== -1;
+          if (matchCat && matchSearch) {
+            item.style.display = '';
+            visible++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+        empty.style.display = visible === 0 ? 'block' : 'none';
+      }
+
+      searchInput.addEventListener('input', filter);
+
+      catBtns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          catBtns.forEach(function(b){ b.classList.remove('active'); });
+          btn.classList.add('active');
+          activeCat = btn.getAttribute('data-cat');
+          filter();
+        });
+      });
+    })();
+  </script>
+  <script src="../js/landing.js"></script>
+</body>
+</html>

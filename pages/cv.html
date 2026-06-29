@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Create Your CV | Free Resume Builder | Gooads CV</title>
+  <meta name="description" content="Create your professional CV or resume with Gooads CV Generator. Fill in your details, preview live, and download as PDF. Free, fast, and easy to use.">
+  <meta name="keywords" content="create cv, build resume, make cv, resume builder, cv maker, free cv builder, online resume creator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gooads-cv.pages.dev/cv.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gooads-cv.pages.dev/cv.html">
+  <meta property="og:title" content="Create Your CV | Free Resume Builder">
+  <meta property="og:description" content="Create your professional CV or resume with Gooads CV Generator. Free, fast, and easy to use.">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "CV Builder",
+    "description": "Create professional CVs and resumes online",
+    "url": "https://gooads-cv.pages.dev/cv.html"
+  }
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="../js/languages.js"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="cv-builder">
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="/" class="logo" aria-label="Gooads CV Generator Home">
+        <span class="logo-icon">📄</span>
+        <span class="logo-text">Gooads<span class="logo-accent">CV</span></span>
+      </a>
+      <div class="nav-links">
+<a href="features.html" data-i18n="features">Features</a>
+        <a href="how-it-works.html" data-i18n="howItWorks">How It Works</a>
+        <a href="faq.html" data-i18n="faq">FAQ</a>
+        <a href="cv.html" data-i18n="createCV">Create CV</a>
+        <select id="lang-select" class="lang-select">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="layout" aria-label="CV Builder">
+    <!-- Tab Navigation -->
+    <div class="tab-bar">
+      <button class="tab-btn active" data-tab="form" data-i18n="yourInfo">Your Information</button>
+      <button class="tab-btn" data-tab="preview" data-i18n="livePreview">Live Preview</button>
+    </div>
+
+    <!-- Form Panel -->
+    <section class="form-panel active" id="tab-form" aria-label="CV Form">
+      <div class="panel">
+
+      <div class="form-row">
+        <div class="field full">
+          <label for="cv-name" data-i18n="fullName">Full Name</label>
+          <input id="cv-name" type="text" placeholder="John Doe" aria-label="Full Name">
+          <span class="field-error"></span>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="field">
+          <label for="cv-email" data-i18n="email">Email</label>
+          <input id="cv-email" type="email" placeholder="john@example.com" aria-label="Email Address" required>
+          <span class="field-error" id="email-error"></span>
+        </div>
+        <div class="field">
+          <label for="cv-phone" data-i18n="phone">Phone</label>
+          <input id="cv-phone" type="tel" placeholder="+1 555 000-0000" aria-label="Phone Number">
+          <span class="field-error"></span>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="field">
+          <label for="cv-location" data-i18n="location">Location</label>
+          <input id="cv-location" type="text" placeholder="New York, USA" aria-label="Location">
+          <span class="field-error"></span>
+        </div>
+        <div class="field">
+          <label for="cv-photo" data-i18n="photo">Photo</label>
+          <input id="cv-photo" type="file" accept="image/*" aria-label="Upload Photo">
+          <span class="field-error" id="cv-photo-name"></span>
+        </div>
+      </div>
+      
+      <div class="field full">
+        <label for="cv-summary" data-i18n="summary">Professional Summary</label>
+        <textarea id="cv-summary" rows="4" placeholder="A brief summary of your professional background..." aria-label="Professional Summary"></textarea>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="section">
+        <div class="section-title" data-i18n="skills">Skills</div>
+        <div class="skills-input">
+          <input id="skill-input" type="text" placeholder="e.g., JavaScript, React, Node.js" aria-label="Add a skill">
+          <button id="add-skill" class="btn btn-secondary" data-i18n="addSkill">Add</button>
+        </div>
+        <ul id="skills-list" class="skills-list" aria-label="Your skills"></ul>
+      </div>
+
+      <!-- Experience Section -->
+      <div class="section">
+        <div class="section-title" data-i18n="experience">Work Experience</div>
+        <div id="experiences" role="list" aria-label="Work experience entries"></div>
+        <button id="add-experience" class="btn btn-secondary" data-i18n="addExperience">+ Add Experience</button>
+      </div>
+
+      <!-- Education Section -->
+      <div class="section">
+        <div class="section-title" data-i18n="education">Education</div>
+        <div id="educations" role="list" aria-label="Education entries"></div>
+        <button id="add-education" class="btn btn-secondary" data-i18n="addEducation">+ Add Education</button>
+      </div>
+
+      <button id="download" class="btn btn-primary btn-download" aria-label="Download CV as PDF" data-i18n="downloadPdf">
+        📄 Download PDF
+      </button>
+      <p class="note" data-i18n="autoSave">💾 Your CV is automatically saved. Come back anytime to continue editing.</p>
+      </div>
+    </section>
+
+    <!-- Preview Panel -->
+    <aside class="preview-panel" id="tab-preview" aria-label="Live Preview">
+      <div class="panel">
+        <div class="template-bar">
+          <label class="template-opt">
+            <input type="radio" name="template" value="classic" checked>
+            <span class="tmpl-lbl">Classic</span>
+          </label>
+          <label class="template-opt">
+            <input type="radio" name="template" value="modern">
+            <span class="tmpl-lbl">Modern</span>
+          </label>
+          <label class="template-opt">
+            <input type="radio" name="template" value="minimal">
+            <span class="tmpl-lbl">Minimal</span>
+          </label>
+          <label class="template-opt">
+            <input type="radio" name="template" value="executive">
+            <span class="tmpl-lbl tmpl-na">Executive</span>
+          </label>
+          <label class="template-opt">
+            <input type="radio" name="template" value="creative">
+            <span class="tmpl-lbl tmpl-na">Creative</span>
+          </label>
+        </div>
+        <div id="cv-preview" class="preview-content" aria-live="polite" aria-label="CV Preview"></div>
+        <button id="download-preview" class="btn btn-primary btn-download" aria-label="Download CV as PDF" data-i18n="downloadPdf">
+          📄 Download PDF
+        </button>
+        <p class="note" data-i18n="autoSave">💾 Your CV is automatically saved. Come back anytime to continue editing.</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Templates for dynamic content -->
+  <template id="exp-template">
+    <div class="exp-item" role="listitem">
+      <input class="exp-role" type="text" placeholder="Job Title / Role" aria-label="Job title">
+      <input class="exp-company" type="text" placeholder="Company Name" aria-label="Company">
+      <input class="exp-start" type="text" placeholder="Start Date (e.g., Jan 2020)" aria-label="Start date">
+      <input class="exp-end" type="text" placeholder="End Date (e.g., Present)" aria-label="End date">
+      <textarea class="exp-desc" rows="3" placeholder="Describe your responsibilities and achievements..." aria-label="Job description"></textarea>
+      <button type="button" class="remove-exp btn" aria-label="Remove experience">🗑️ Remove</button>
+    </div>
+  </template>
+
+  <template id="edu-template">
+    <div class="edu-item" role="listitem">
+      <input class="edu-degree" type="text" placeholder="Degree / Qualification" aria-label="Degree">
+      <input class="edu-school" type="text" placeholder="School / University" aria-label="Institution">
+      <input class="edu-start" type="text" placeholder="Start Date" aria-label="Start date">
+      <input class="edu-end" type="text" placeholder="End Date" aria-label="End date">
+      <textarea class="edu-desc" rows="2" placeholder="Additional details (optional)" aria-label="Education description"></textarea>
+      <button type="button" class="remove-edu btn" aria-label="Remove education">🗑️ Remove</button>
+    </div>
+  </template>
+
+  <script src="../js/cv.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
